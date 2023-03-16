@@ -1,0 +1,24 @@
+.row{
+  padding: 5px;
+  margin: 5px;
+}
+
+.main{
+  margin-left: 80px;
+}
+
+.create-product-card{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 15px;
+  margin: 15px;
+}
+
+#productDescription{
+  height: 150px;
+}
+
+.select_category{
+  text-align: left;
+  margin-left: 10px;
+}

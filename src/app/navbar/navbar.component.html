@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="''"><img src="assets/images/logo.png" alt="Logo trocGlisse" class="trocglisse-logo"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownSurf" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Matériel de surf
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownSurf">
+          <a class="dropdown-item" [routerLink]="'/product/shortboard'">Shortboard</a>
+          <a class="dropdown-item" [routerLink]="'/product/not_expensive_surf_planks'">Planches pas cher</a>
+          <a class="dropdown-item" [routerLink]="'/product/mossy_planks'">Planches en mousse et pour débutants</a>
+          <a class="dropdown-item" [routerLink]="'/product/longboard'">Longboard</a>
+          <a class="dropdown-item" [routerLink]="'/product/stand_up_paddle'">Stand Up Paddle</a>
+          <a class="dropdown-item" [routerLink]="'/product/mini_malibu'">Mini Malibu</a>
+          <a class="dropdown-item" [routerLink]="'/product/fish'">Fish</a>
+          <a class="dropdown-item" [routerLink]="'/product/hybride'">Hybride</a>
+          <a class="dropdown-item" [routerLink]="'/product/egg'">Egg</a>
+          <a class="dropdown-item" [routerLink]="'/product/evolutive'">Evolutive</a>
+          <a class="dropdown-item" [routerLink]="'/product/gun'">Gun</a>
+          <a class="dropdown-item" [routerLink]="'/product/vintage'">Vintage</a>
+          <a class="dropdown-item" [routerLink]="'/product/retro'">Retro</a>
+          <a class="dropdown-item" [routerLink]="'/product/child'">Child</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="'/product/surf_various'">Divers</a>
+        </div>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownSwim" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Matériel de plongée
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownSwim">
+          <a class="dropdown-item" [routerLink]="'/product/diving_combination'">Combinaisons</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="'/product/diving_flipper'">Palmes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="'/product/diving_bottles'">Bouteilles</a>
+        </div>
+      </li> -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownShaper" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Matériel de shapers
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownShaper">
+          <a class="dropdown-item" [routerLink]="'/product/shaperpro'">ShaperPro</a>
+          <a class="dropdown-item" [routerLink]="'/product/xtremshaper'">XtremShaper</a>
+          <a class="dropdown-item" [routerLink]="'/product/shapersousmarin'">ShaperSousMarin</a>
+        </div>
+      </li> -->
+      <!--<li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>-->
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" (keyup)="onKey($event)" placeholder="Search" aria-label="Search">
+    <!--<p>{{ searchInput }}</p>-->
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="onSubmit($event)">Search</button>
+  </form>
+<app-account-widget></app-account-widget>
+</div>
+</nav>

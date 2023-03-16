@@ -1,0 +1,7 @@
+<div *ngIf="Connected">
+  <a [routerLink]="'/account-settings'"><img src="{{ Avatar }}" alt="Avatar de l'utilisateur" class="user_avatar"/></a>
+</div>
+<div *ngIf="!Connected">
+  <a [routerLink]="'/connexion'" class="disconnected">Connexion</a>
+  <a [routerLink]="'/create-account'" class="disconnected">Créer un compte</a>
+</div>

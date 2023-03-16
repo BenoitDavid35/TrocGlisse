@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="assets/images/logo.png" alt="logo TrocGlisse" class="logo">
+    </div>
+    <div class="col-sm-8 page_frame">
+      <img src="http://vps696635.ovh.net:7777/images-api/{{ jumbotron }}" alt="Jumbotron TrocGlisse">
+    </div>
+    <div class="col-sm-2">
+      <app-account-widget></app-account-widget>
+      <div class="row add-product">
+        <a class="dropdown-item" [routerLink]="'/create-product'">Ajouter un produit</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2 left">
+      <div class="row">
+        <label>Dans quelle région souhaitez vous chercher ?</label>
+      </div>
+      <div class="form-group select_category">
+<app-filters></app-filters>
+      </div>
+    </div>
+    <div class="col-sm-8 page_frame">
+      <div class="row">
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/shortboard'">Shortboard</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/not_expensive_surf_planks'">Planches pas cher</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/mossy_planks'">Planches en mousse et pour débutants</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/longboard'">Longboard</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/stand_up_paddle'">Stand Up Paddle</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/mini_malibu'">Mini Malibu</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/fish'">Fish</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/hybride'">Hybride</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/egg'">Egg</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/evolutive'">Evolutive</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/gun'">Gun</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/vintage'">Vintage</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/retro'">Retro</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/child'">Child</a>
+        </div>
+        <div class="col-sm-3 navbar-card">
+          <a [routerLink]="'/product/surf_various'">Divers</a>
+        </div>
+      </div>
+      <div *ngFor="let product of arrProductList">
+        <a [routerLink]="['/product/',product.id_category,product.product_id]">
+          <div class="row product">
+            <div class="col-sm-4">
+              <img src="http://vps696635.ovh.net:7777/images-api/{{ product.FileName1 }}"
+              alt="image produit sponso trocGlisse"
+              class="teaser_picture"
+              >
+            </div>
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-sm-8">
+                  {{product.Name}}
+                </div>
+                <div class="col-sm-4">
+                  A la une
+                </div>
+              </div>
+              <div class="row">
+                {{product.region}}
+              </div>
+              <div class="row">
+                {{product.website_expiration}}
+              </div>
+              <div class="row">
+                {{product.product_category}}
+              </div>
+              <div class="row">
+                {{product.Teaser}}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

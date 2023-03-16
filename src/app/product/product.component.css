@@ -1,0 +1,33 @@
+.boxes{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 15px;
+  margin: 15px;
+}
+
+.cart{
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.product_image{
+  width: 250px;
+  height: auto;
+  padding-left: 10px;
+}
+
+.image_teaser{
+  width: 125px;
+  height: 125px;
+}
+
+.picture_teaser{
+  padding-left: 10px;
+}
+
+.text{
+  padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}

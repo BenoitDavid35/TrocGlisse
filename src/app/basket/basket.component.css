@@ -1,0 +1,21 @@
+.main_product_picture{
+  width: 250px;
+  height: auto;
+}
+
+.product_picture{
+  width: 100px;
+  height: auto;
+}
+
+.history_product{
+  padding: 2px;
+  border: 1px black solid;
+  margin: 3px;
+}
+
+.product_surroundings{
+  margin: 3px;
+  border: 1px black solid;
+  padding: 2px;
+}

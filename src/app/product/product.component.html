@@ -1,0 +1,99 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="boxes">
+    <div class="row justify-content-center">
+      <div class="col-sm-4" >
+        <div class="row justify-content-center">
+          <div (click)="changePicture(1)">
+            <img src="http://vps696635.ovh.net:7777/images-api/{{ FileName1 }}" alt="product image" class="product_image" />
+          </div>
+        </div>
+        <div class="row picture_teaser justify-content-center">
+          <div (click)="changePicture(2)">
+            <img src="http://vps696635.ovh.net:7777/images-api/{{ FileName2 }}" alt="product image" class="image_teaser" />
+          </div>
+          <div (click)="changePicture(3)">
+            <img src="http://vps696635.ovh.net:7777/images-api/{{ FileName3 }}" alt="product image" class="image_teaser" />
+          </div>
+          <div (click)="changePicture(4)">
+            <img src="http://vps696635.ovh.net:7777/images-api/{{ FileName4 }}" alt="product image" class="image_teaser" />
+          </div>
+          <div (click)="changePicture(5)">
+            <img src="http://vps696635.ovh.net:7777/images-api/{{ FileName5 }}" alt="product image" class="image_teaser" />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <h1>{{ products?.name }}</h1>
+        <div class="row justify-content-center text">
+          <p>Product infos: {{ products?.Teaser }}</p>
+        </div>
+        <div class="row justify-content-center text">
+          <p>Mis en ligne par: {{ products?.user_id }}</p>
+        </div>
+        <div class="row justify-content-center text">
+          <p>Prix: {{ products?.price }} €</p>
+        </div>
+        <!-- <div class="row justify-content-center" *ngIf="{{sales}}">
+          <p>Prix soldes: {{ products?.price_sales }}</p>
+        </div> -->
+        <div class="row justify-content-center text">
+          <p>{{ products?.description }}</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="boxes">
+          <div class="row justify-content-center">
+            <button type="button" class="btn btn-warning" id="buy_now">Acheter maintenant</button>
+            <button *ngIf="!products?.products_id" type="button" class="btn btn-danger" (click)="addNewFavorite(products?.id)">Add Favorite</button>
+            <button *ngIf="products?.products_id" type="button" class="btn btn-danger" (click)="removeFavorite(products?.id)">Remove Favorite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="boxes">
+        <div class="col-sm-12">
+          <p>Commentaires</p>
+          <div class="row justify-content-center">
+            <div *ngFor="let commentary of commentaries">
+              <div class="commentary_surroundings">
+                <div class="row justify-content-center">
+                  <div class="col-sm-6">
+                    <p>{{ commentary.id }}</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>{{ commentary.publication_time }}</p>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-sm-8">
+                      <h2>{{ commentary.title }}</h2>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-sm-8">
+                      <p>{{ commentary.message }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Déposer un nouveau commentaire</p>
+          <div class="row">
+              <label for="id">Titre: </label>
+              <input type="text" class="form-control" id="title" name="input_title" [(ngModel)]="title">
+          </div>
+          <div class="row">
+              <label for="pwd">Message:</label>
+              <input type="text" class="form-control" id="message" name="input_message" [(ngModel)]="message">
+          </div>
+          <div class="row">
+            <button type="button" class="btn btn-primary" (click)="sendCommentary()">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,14 @@
+.user_avatar{
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+}
+
+.history_product{
+  margin: 10px;
+  padding: 10px;
+}
+
+.btn{
+  margin-top: 10px;
+}

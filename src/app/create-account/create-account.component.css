@@ -1,0 +1,16 @@
+.row{
+  padding: 5px;
+  margin: 5px;
+}
+
+.create-account-card{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 15px;
+  margin: 15px;
+}
+
+.create-account-logo{
+  height: 100px;
+  width: 100px;
+}

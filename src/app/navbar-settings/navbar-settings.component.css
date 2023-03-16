@@ -1,0 +1,17 @@
+/*THE FOLLOWING ONE IS TO REMOVE ONCE THE REAL LOGO IS SET UP*/
+ .trocglisse-logo{
+  width:40px;
+  height:40px;
+}
+
+.dropdown-item{
+  color: #FFFFFF;
+}
+
+a:hover{
+  background-color: inherit;
+}
+
+nav{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,66 @@
+<app-navbar-settings></app-navbar-settings>
+
+<!-- <div class='row' *ngIf="productError">
+  <label>Une erreur est survenue lors de l'enregistrement du produit. Merci de réessaier ultérieurement.</label>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <p>Bonjour {{ Name }} {{ Surname }}</p>
+      <p>Souhaitez vous changer votre addresse ? {{ Address }}</p>
+      <div class="form-group">
+        <label for="newAddr">Nouvelle adresse:</label>
+        <input type="texte" class="form-control" id="newAddr" name="newAddr" [(ngModel)]="newAddr">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="onSubmitAddr()">Valider le changement d'adresse</button>
+      <label *ngIf="adrError">Il y à eu une erreur lors du changement de votre adresse. Merci de réessaier plus tard</label>
+      <p>Votre adresse mail est: {{ Mail }}</p>
+
+      <p>Souhaitez vous changer votre mot de passe ?</p>
+      <div *ngIf="localReturn" class="form-group">
+        {{localReturn}}
+      </div>
+      <div class="form-group">
+        <label for="pwd">Ancien mot de passe:</label>
+        <input type="password" [(ngModel)]="pwdOld" #ctrl="ngModel" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Changer mon mot de passe:</label>
+        <input type="password" [(ngModel)]="pwdChange" #ctrl="ngModel" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Confirmez le mot de passe:</label>
+        <input type="password" [(ngModel)]="pwdConfirm" #ctrl="ngModel" class="form-control">
+      </div>
+      <button class="btn btn-primary" (click)="changePassword()">Valider le changement</button>
+      <br>
+      <label *ngIf="passChanged">Votre mot de passe à été changé avec succès</label>
+      <label *ngIf="passError">Il y à eu une erreur lors du changement de mot de passe, merci de réessaier plus tard</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+      <img src="{{ Avatar }}" alt="Image du profil de l'utilisateur" class="user_avatar"/>
+      <div class="row">
+        <label for="profilePic">Changer d'image de profil ?</label>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <input type="file"
+          ngModel
+          name="image"
+          class="form-control"
+          (change)="fileInput($event)"/>
+        </div>
+      </div>
+      <label *ngIf="fileError">Il y à eu une erreur dans la modification de votre image de profil. Merci de réessaier plus tard</label>
+      <div class="row">
+        <form #myform="ngForm" (ngSubmit)="onDisconnect()">
+          <input class="btn btn-primary" type="submit" value="Déconnexion">
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>

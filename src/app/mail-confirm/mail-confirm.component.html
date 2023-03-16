@@ -1,0 +1,13 @@
+<div *ngIf="accountConfirmed">
+  <p>Votre compte à été validé avec succès. Vous pouvez désormais vous connecter.
+</div>
+
+<div *ngIf="errorConfirm">
+  <p>Il y à une erreur dans la validation, votre lien est incorrect. Veuillez contacter le support client.</p>
+</div>
+
+<div *ngIf="noToken">
+  <div class="row justify-content-center">
+    <p>Merci d'avoir créé un compte sur TrocGlisse.<br> Nous vous avons envoyé un Email afin de confirmer la création de votre compte.</p>
+  </div>
+</div>

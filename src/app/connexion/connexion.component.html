@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="login-main">
+  <div class="row justify-content-center">
+    <div class="col-sm-4 login-card">
+      <div class="row justify-content-center">
+        <h2>Connexion</h2>
+      </div>
+        <div class="row justify-content-center">
+          <p *ngIf="creds">L'identifiant et le mot de passe ne correspondent à aucun compte</p>
+          <div class="form-group">
+            <label for="id">Identifiant:</label>
+            <input type="text" class="form-control" id="login" name="input_login" [(ngModel)]="login">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group">
+            <label for="pwd">Mot de passe:</label>
+            <input type="password" class="form-control" id="pwdConfirm" name="input_password" [(ngModel)]="password">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <button type="button" class="btn btn-primary" (click)="onSubmit()">Connexion</button>
+        </div>
+    </div>
+  </div>
+</div>

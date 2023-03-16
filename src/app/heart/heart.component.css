@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.teaser_picture{
+  width: 200px;
+  height: auto;
+  padding-left: 10px;
+}
+
+.product{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 15px;
+  margin: 7px;
+}

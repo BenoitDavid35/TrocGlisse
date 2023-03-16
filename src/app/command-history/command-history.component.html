@@ -1,0 +1,43 @@
+<app-navbar-settings></app-navbar-settings>
+<label *ngIf="delError">Une erreur est survenue lors de la suppression du produit, merci de réessaier plus tard</label>
+<label *ngIf="delSuccess">Le produit à été supprimé avec succès</label>
+<div *ngFor="let product of arrProductList">
+  <div class="row product">
+    <div class="col-sm-4">
+      <a [routerLink]="['/product/',product.product_category,product.id]">
+        <img src="http://vps696635.ovh.net:7777/images-api/{{ product.FileName1 }}"
+        alt="image produit sponso trocGlisse"
+        class="teaser_picture"
+        >
+      </a>
+    </div>
+    <div class="col-sm-8">
+      <div class="row">
+        <div class="col-sm-8">
+          <a [routerLink]="['/product/',product.product_category,product.id]">
+            {{product.Name}}
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a [routerLink]="['/product/',product.product_category,product.id]">
+            A la une
+          </a>
+          <div class="row">
+            <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">Supprimer</button>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/product/',product.product_category,product.id]">
+        <div class="row">
+          {{product.region}}
+        </div>
+        <div class="row">
+          {{product.website_expiration}}
+        </div>
+        <div class="row">
+          {{product.Teaser}}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

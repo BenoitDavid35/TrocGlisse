@@ -1,0 +1,4 @@
+<select [(ngModel)]='regionsValue' name="select_location" (change)="changeRegion()">
+  <option selected="selected" value="0">--Toutes les régions--</option>
+  <option *ngFor="let r of regions" value="{{r.id}}">{{r.name}} - {{r.id}}</option>
+</select>

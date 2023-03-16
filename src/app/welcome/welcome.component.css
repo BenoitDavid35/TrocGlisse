@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.teaser_picture{
+  width: 200px;
+  height: auto;
+  padding-left: 10px;
+}
+
+.logo{
+  width: 125px;
+  height: auto;
+}
+
+.page_frame{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: -2px;
+}
+
+.product{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 15px;
+  margin: 7px;
+}
+
+.navbar-card{
+  border: 1px solid lightgrey;
+}
+
+.left{
+  padding-right: 2px;
+}
+
+.add-product{
+  margin: 5px;
+  border-color: black;
+  padding: 5px;
+  border-radius: 3px;
+}

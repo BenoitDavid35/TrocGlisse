@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <h1>
+    Vue de la prise de contact
+  </h1>
+  <div class="row">
+    <div class="col-sm-3">
+      <a [routerLink]="'/tiquet_overview'">retour a la liste de tiquets</a>
+    </div>
+    <div class="col-sm-9 justify-content-center">
+      <div class="col-sm-6">
+        <h2>{{ contact.object }}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <h3>{{ contact.message }}</h3>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <p>Par {{ contact.Surname }} {{ contact.Name }} #{{ contact.id }}</p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

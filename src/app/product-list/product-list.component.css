@@ -1,0 +1,19 @@
+/* .product_list_main{
+  align-items: center;
+} */
+
+.product_picture{
+  width: 250px;
+  height: auto;
+}
+
+.product_surroundings{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 15px;
+  margin: 7px;
+}
+
+h2{
+  font-size: 17px;
+}

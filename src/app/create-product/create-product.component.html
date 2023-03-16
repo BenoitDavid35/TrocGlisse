@@ -1,0 +1,138 @@
+<app-navbar-settings></app-navbar-settings>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="create-product-card">
+      <form #myform="ngForm" (ngSubmit)="onSubmit(myform)" class="form-group">
+        <div class="row">
+          <label>Nom du produit</label>
+        </div>
+        <div class="row">
+          <input type="texte"
+          ngModel
+          name="productName"
+          id="productName"
+          class="form-control"
+          max="30">
+        </div>
+        <label *ngIf="productName">Merci de compléter le nom du produit</label>
+        <div class="row">
+          <label>Teaser du produit</label>
+        </div>
+        <div class="row">
+          <input type="text"
+          ngModel
+          name="productTeaser"
+          id="productTeaser"
+          class="form-control"
+          max="30">
+        </div>
+        <label *ngIf="productTeaser">Merci de donner une courte description au produit</label>
+        <div class="row">
+          <label>Description complète du produit</label>
+        </div>
+        <div class="row">
+          <textarea
+          ngModel
+          name="productDescription"
+          id="productDescription"
+          rows="10"
+          cols="50"
+          class="form-control">
+        </textarea>
+      </div>
+      <label *ngIf="productDescription">Merci de donner une description complète du produit</label>
+      <div class="row">
+        <label>Prix</label>
+      </div>
+      <div class="row">
+        <input type="text"
+        ngModel
+        name="productPrice"
+        id="productPrice"
+        class="form-control"
+        max="999999">
+      </div>
+      <div class='row' *ngIf="productPrice">
+        <label >Merci de renseigner le prix que vous souhaitez en tirer avec des numéros et sans le symbole monétaire</label>
+      </div>
+      <div class="row">
+        <label>Insérez les images du produit</label>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <input type="file"
+          ngModel
+          name="image"
+          class="form-control"
+          (change)="fileInput1($event)"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <input type="file"
+          ngModel
+          name="image"
+          class="form-control"
+          (change)="fileInput2($event)"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <input type="file"
+          ngModel
+          name="image"
+          class="form-control"
+          (change)="fileInput3($event)"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <input type="file"
+          ngModel
+          name="image"
+          class="form-control"
+          (change)="fileInput4($event)"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <input type="file"
+          ngModel
+          name="image"
+          class="form-control"
+          (change)="fileInput5($event)"/>
+        </div>
+      </div>
+      <label *ngIf="fileNameValidation">Vous devez compléter les 5 champs image sinon votre produit ne pourra pas être mis en ligne</label>
+      <div class="row">
+        <label>Sélectionnez la catégorie de votre produit</label>
+      </div>
+      <div class="form-group select_category">
+        <select ngModel name="select_category">
+          <option selected="selected" value="0">--Toutes les catégories--</option>
+          <option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
+        </select>
+        <div class='row' *ngIf="select_category">
+          <label >Merci de renseigner une catégorie pour le produit</label>
+        </div>
+        <div class="row">
+          <label>Dans quelle région afficher votre produit ?</label>
+        </div>
+          <div class="form-group select_category">
+            <app-filters></app-filters>
+          </div>
+          <div class='row' *ngIf="adrError">
+            <label>Merci de donner une zone géographique dans laquelle vendre votre produit.</label>
+          </div>
+      </div>
+      <div class="row">
+        <input type="submit" class="btn btn-primary" value="Mettre en ligne votre produit" >
+      </div>
+      <div class='row' *ngIf="productError">
+        <label>Une erreur est survenue lors de l'enregistrement du produit. Merci de réessaier ultérieurement.</label>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+.login-card{
+  margin: 5px;
+  padding: 5px;
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+h2{
+  margin-top: 7px;
+}
+
+button{
+  margin-bottom: 7px;
+}
+
+app-footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
